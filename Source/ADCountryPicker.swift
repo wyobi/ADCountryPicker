@@ -116,13 +116,13 @@ open class ADCountryPicker: UITableViewController {
     
     fileprivate let collation = UILocalizedIndexedCollation.current()
         as UILocalizedIndexedCollation
-    open weak var delegate: ADCountryPickerDelegate?
+    @objc open weak var delegate: ADCountryPickerDelegate?
     
     /// Closure which returns country name and ISO code
-    open var didSelectCountryClosure: ((String, String) -> ())?
+    @objc open var didSelectCountryClosure: ((String, String) -> ())?
     
     /// Closure which returns country name, ISO code, calling codes
-    open var didSelectCountryWithCallingCodeClosure: ((String, String, String) -> ())?
+    @objc open var didSelectCountryWithCallingCodeClosure: ((String, String, String) -> ())?
     
     /// Flag to indicate if calling codes should be shown next to the country name. Defaults to false.
     open var showCallingCodes = false
@@ -134,7 +134,7 @@ open class ADCountryPicker: UITableViewController {
     open var pickerTitle = "Select a Country"
     
     /// The default current location, if region cannot be determined. Defaults to US
-    open var defaultCountryCode = "US"
+    @objc open var defaultCountryCode = "US"
     
     /// Flag to indicate whether the defaultCountryCode should be used even if region can be deteremined. Defaults to false
     open var forceDefaultCountryCode = false
